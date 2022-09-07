@@ -1,5 +1,5 @@
 import bodyParser from "body-parser";
-import express from "express";
+import express, { Request, Response } from "express";
 import * as Util from "./util/util";
 
 (async () => {
@@ -10,12 +10,13 @@ import * as Util from "./util/util";
 
   // Root Endpoint
   // Displays a simple message to the user
-  app.get("/", async (req, res) => {
+  app.get("/", async (req: Request, res: Response) => {
     res.send("try GET /filteredimage?image_url={{}}");
   });
 
-  app.get("/filteredimage/", async (req, res) => {
-    const { image_url } = req.query;
+  app.get("/filteredimage/", async (req: Request, res: Response) => {
+    const { image_url }: { image_url: string } = req.query;
+
     if (!image_url) {
       return res.status(400).send(`"image_url" query parameter is required`);
     }
