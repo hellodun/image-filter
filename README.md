@@ -39,4 +39,4 @@ Prevent requests without valid authentication headers.
 
 ### Custom Domain Name
 
-http://imagefilter-env.eba-kgadbqmy.us-east-1.elasticbeanstalk.com/
+http://image-filter-dev2222222.us-east-1.elasticbeanstalk.com/
