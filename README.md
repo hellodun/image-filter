@@ -1,42 +1,67 @@
-# Udagram Image Filtering Microservice
+# Udagram - Image filter project
 
-Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
+This project is part of a Udacity Cloud Developer Nanodegree I am doing.
 
-## Tasks
+The objective is to implement a Nodejs program that accepts an image url and filters the image from the from the url and returns the image as the response
 
-### Setup Node Environment
+## Lessons Learned
 
-You'll need to create a new node server. Open a new terminal within the project directory and run:
+- API development with Nodejs and Express
+- Deploying an application using AWS Elastic Beanstalk
+- Working with the AWS CLI tool
+- Working with TypeScript in a Nodejs project
 
-1. Initialize a new project: `npm i`
-2. run the development server with `npm run dev`
+## Screenshots
 
-### Create a new endpoint in the server.ts file
+Deployed via aws cli
 
-The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
+![Deploy via CLI](https://raw.githubusercontent.com/hellodun/image-filter/main/deployment_screenshots/eb_create_cli.png)
 
-We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts` file.
+---
 
-```typescript
-import { filterImageFromURL, deleteLocalFiles } from "./util/util";
+Deployment Status in Elastic Beanstalk
+
+![Deploy via CLI](https://raw.githubusercontent.com/hellodun/image-filter/main/deployment_screenshots/eb_deplotmentStatus.png)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/hellodun/image-filter.git
 ```
 
-### Deploying your system
+Go to the project directory
 
-Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
+```bash
+  cd image-filter
+```
 
-## Stand Out (Optional)
+Install dependencies
 
-### Refactor the course RESTapi
+```bash
+  npm install
+```
 
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
+Start the server
 
-### Authentication
+```bash
+  npm run dev
+```
 
-Prevent requests without valid authentication headers.
+## Deployment
 
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
+Note: AWS CLI tool should be installed
 
-### Custom Domain Name
+To deploy this project run
 
-http://image-filter-dev2222222.us-east-1.elasticbeanstalk.com/
+```bash
+  cd image-filter
+  npm run build
+  eb init
+  eb create
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
