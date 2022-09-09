@@ -11,17 +11,7 @@ The objective is to implement a Nodejs program that accepts an image url and fil
 - Working with the AWS CLI tool
 - Working with TypeScript in a Nodejs project
 
-## Screenshots
-
-Deployed via aws cli
-
-![Deploy via CLI](https://raw.githubusercontent.com/hellodun/image-filter/main/deployment_screenshots/eb_create_cli.png)
-
 ---
-
-Deployment Status in Elastic Beanstalk
-
-![Deploy via CLI](https://raw.githubusercontent.com/hellodun/image-filter/main/deployment_screenshots/eb_deplotmentStatus.png)
 
 ## Run Locally
 
@@ -61,6 +51,20 @@ To deploy this project run
   eb init
   eb create
 ```
+
+---
+
+## Screenshots
+
+Deployed via aws cli
+
+![Deploy via CLI](https://raw.githubusercontent.com/hellodun/image-filter/main/deployment_screenshots/eb_create_cli.png)
+
+---
+
+Deployment Status in Elastic Beanstalk
+
+![Deploy via CLI](https://raw.githubusercontent.com/hellodun/image-filter/main/deployment_screenshots/eb_deplotmentStatus.png)
 
 ## License
 
